@@ -1,11 +1,11 @@
 package labweb2.controll;
 
-public class RequestParametrs {
+public class RequestParameters {
     private final double x;
     private final double y;
     private final double r;
 
-    public RequestParametrs(String x, String y, String r) {
+    public RequestParameters(String x, String y, String r) {
         this.x = Double.parseDouble(x);
         this.y = Double.parseDouble(y);
         this.r = Double.parseDouble(r);

@@ -1,7 +1,6 @@
 package labweb2.controll;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,11 +17,11 @@ public class ControllerServlet extends HttpServlet {
                 && isCorrectParameters(req.getParameter("y"))
                 && isCorrectParameters(req.getParameter("r"))
         ) {
-            RequestParametrs requestParametrs = new RequestParametrs(
+            RequestParameters requestParameters = new RequestParameters(
                     req.getParameter("x"),
                     req.getParameter("y"),
                     req.getParameter("r"));
-            AreaCheckServlet areaCheckServlet = new AreaCheckServlet(requestParametrs, resp, req);
+            AreaCheckServlet areaCheckServlet = new AreaCheckServlet(requestParameters, resp, req);
             areaCheckServlet.work();
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         } else {
@@ -35,7 +34,7 @@ public class ControllerServlet extends HttpServlet {
             return false;
         }
         try {
-            double d = Double.parseDouble(s);
+            Double.parseDouble(s);
         } catch (NumberFormatException nfe) {
             return false;
         }

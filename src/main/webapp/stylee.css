@@ -38,7 +38,7 @@ html {
     border: 6px;
     border-left: 40px;
     border-right: 4px;
-    background-color:  rgb(246 186 255 / 71%);
+    background-color: rgb(246 186 255 / 71%);
 }
 
 .content__scroll {
@@ -87,11 +87,11 @@ html {
 }
 
 
-.content__labels_y_no-warning:hover, .content__labels_y_warning:hover, .content__labels_x-group:hover, .content__label_r_radio:hover  {
+.content__labels_y_no-warning:hover, .content__labels_y_warning:hover, .content__labels_x-group:hover, .content__label_r_radio:hover {
     box-shadow: 0 0 12px rgba(246, 245, 248, 0.43);
 }
 
-.content__labels_y_warning,  .content__labels_y_no-warning{
+.content__labels_y_warning, .content__labels_y_no-warning {
     text-decoration: none;
     display: inline-block;
     padding: 10px 30px;
@@ -106,14 +106,17 @@ html {
     border-radius: 4px;
     background-color: rgba(248, 160, 160, 0.78);
 }
+
 ::placeholder {
     color: rgba(255, 255, 255, 0.62);
     font-size: 13px;
 }
-.content__labels_y_no-warning{
+
+.content__labels_y_no-warning {
     background-color: rgba(241, 232, 232, 0.23);
 }
-.content__labels_error, .content__label-text{
+
+.content__labels_error, .content__label-text {
     color: #f34848;
     font-weight: normal;
     font-family: 'Abyssinica SIL', serif;
@@ -124,6 +127,7 @@ html {
     width: 400px;
     padding-left: 10px;
 }
+
 .content__labels_no-error {
     background: none;
     color: rgba(255, 255, 255, 0);
@@ -141,11 +145,13 @@ html {
     display: grid;
     grid-area: graphic;
 }
+
 .content__canvas {
     padding: 50px;
     background: rgb(7 7 7 / 38%);
 }
-.bubble{
+
+.bubble {
     position: absolute;
     width: 7px;
     height: 7px;
@@ -153,6 +159,7 @@ html {
     background-color: #d2f4fb;
     box-shadow: 0 0 0 0 #d2f4fb;
 }
+
 .content__canvas_graph:hover {
     cursor: url("https://cdn.custom-cursor.com/db/13504/32/comics-and-books-captain-underpants-cursor.png") 4 0, auto;
 }
@@ -165,14 +172,15 @@ select.content__labels_x-group {
     margin: 8px 6px;
 }
 
-.content__label-text{
+.content__label-text {
     background: rgba(0, 0, 0, 0);
     color: #ced0e7;
     text-decoration: underline;
     font-size: 18px;
     letter-spacing: 2px;
 }
-.content__labels_r-group{
+
+.content__labels_r-group {
     color: #fafafd;
     font-size: 15px;
 }
@@ -201,7 +209,6 @@ select.content__labels_x-group {
     background: #3b3939;
     cursor: url("https://img.icons8.com/office/0.5x/do-not-disturb.png"), default;
 }
-
 
 
 .content__canvas {

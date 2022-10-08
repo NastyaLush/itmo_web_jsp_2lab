@@ -22,7 +22,7 @@ public class CreateHttpResults {
         HttpSession session =  request.getSession();
         ArrayList<Results> oldResults = (ArrayList<Results>) session.getAttribute(SESSION_ATTRIBUTE);
         if(oldResults ==null) {
-            oldResults = new ArrayList<Results>();
+            oldResults = new ArrayList<>();
         }
         oldResults.add(results);
         System.out.println(results);
@@ -31,10 +31,7 @@ public class CreateHttpResults {
 
         try {
             request.getRequestDispatcher("/index.jsp").forward(request, response);
-        } catch (ServletException e) {
-            // TODO: 07.10.2022  
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             // TODO: 07.10.2022  
             throw new RuntimeException(e);
         }

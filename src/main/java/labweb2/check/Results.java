@@ -1,16 +1,14 @@
 package labweb2.check;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.util.Date;
 
 public class Results {
-    public final double x;
-    public final double y;
-    public final double r;
-    public final Result result;
-    public final String date;
+    private final double x;
+    private final double y;
+    private final double r;
+    private final Result result;
+    private final String date;
 
     public Results(double x, double y, double r, boolean result) {
         this.x = Math.floor(x*1000)/1000;

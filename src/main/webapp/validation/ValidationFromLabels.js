@@ -38,7 +38,6 @@ export class ValidationFromLabels {
     }
 
     sendResponse() {
-        console.log("dd")
         if (this.validY() && this.validR()) {
             console.log(this.x.value, 4);
             $.get('ControllerServlet', {
@@ -51,7 +50,7 @@ export class ValidationFromLabels {
                 .success(function () {
                     location.reload()
                 })
-                .error(function (jqXHR) {
+                .error(function () {
                     console.log('Ошибка выполнения');
                 })
                 .complete(function () {

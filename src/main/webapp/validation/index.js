@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 import {ValidationFromLabels} from "./ValidationFromLabels.js";
 import {ValidationFromGraph} from "./ValidatorFromGraph.js";
@@ -21,6 +21,5 @@ if(point != null) {
     let bubble = $('<div class="bubble" id="bubble" name="bubble"></div>');
     bubble.css({'left': point.left, 'top': point.top});
     $('#canvas').append(bubble);
-    console.log(point, point.toString())
 }
-// $('#canvas').append(bubble);
+

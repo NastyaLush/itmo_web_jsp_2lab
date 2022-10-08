@@ -1,13 +1,13 @@
 package labweb2.check;
 
-import labweb2.controll.RequestParametrs;
+import labweb2.controll.RequestParameters;
 
 public class Check {
     private final Double x;
     private final Double y;
     private final Double r;
 
-    public Check(RequestParametrs parameters) {
+    public Check(RequestParameters parameters) {
         this.x = parameters.getX();
         this.y = parameters.getY();
         this.r = parameters.getR();
