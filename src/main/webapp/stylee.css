@@ -1,0 +1,302 @@
+html {
+    background: url(
+    https://i.pinimg.com/originals/71/98/24/719824569aa59094abbde2beb4fe840f.jpg
+    ) no-repeat fixed center/cover;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.content__head_circle {
+    background-color: rgba(204, 141, 208, 0.73);
+    width: 100px;
+    height: 50px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    position: absolute;
+}
+
+
+.head {
+    display: grid;
+    background: rgba(0, 0, 0, 0.85);
+    grid-area: header;
+    justify-items: stretch;
+
+}
+
+
+.content__scroll::-webkit-scrollbar {
+    width: 20px;
+}
+
+.content__scroll::-webkit-scrollbar-track {
+    background-color: rgb(253 253 253 / 30%);
+    border-radius: 100px;
+}
+
+.content__scroll::-webkit-scrollbar-thumb {
+    border-radius: 80px;
+    border: 6px;
+    border-left: 40px;
+    border-right: 4px;
+    background-color:  rgb(246 186 255 / 71%);
+}
+
+.content__scroll {
+    display: grid;
+    grid-area: table;
+    overflow: scroll;
+    height: 120vh;
+    width: auto;
+}
+
+.content__labels {
+    display: grid;
+    grid-area: label;
+}
+
+.content__canvas {
+    display: grid;
+    grid-area: graphic;
+}
+
+.content {
+    display: grid;
+    justify-content: stretch;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-areas:
+    "header header"
+    "graphic table"
+    "label  table"
+}
+
+
+.content__head_headline_name, .content__head_headline_attributes {
+    padding: 0 15px;
+    text-align: left;
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: rgb(239, 231, 218);
+}
+
+
+.content__head_headline_attributes {
+    text-decoration: none;
+    color: rgba(243, 236, 236, 0.3);
+    font-size: 15px;
+    padding: 2px 15px;
+}
+
+
+.content__labels_y_no-warning:hover, .content__labels_y_warning:hover, .content__labels_x-group:hover, .content__label_r_radio:hover  {
+    box-shadow: 0 0 12px rgba(246, 245, 248, 0.43);
+}
+
+.content__labels_y_warning,  .content__labels_y_no-warning{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    position: relative;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.71);
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: rgba(248, 160, 160, 0.78);
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 13px;
+}
+.content__labels_y_no-warning{
+    background-color: rgba(241, 232, 232, 0.23);
+}
+.content__labels_error, .content__label-text{
+    color: #f34848;
+    font-weight: normal;
+    font-family: 'Abyssinica SIL', serif;
+    text-shadow: 0 1px 2px #000;
+    background: rgba(0, 0, 0, 0.47);
+    border-radius: 6px;
+    margin: 8px 6px;
+    width: 400px;
+    padding-left: 10px;
+}
+.content__labels_no-error {
+    background: none;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+.content__labels_x-group {
+    grid-template-rows:50px;
+    grid-template-columns: 110px 400px 300px;
+    color: #e1e2ff;
+    background: rgba(0, 0, 0, 0);
+}
+
+.content__canvas {
+    display: grid;
+    grid-area: graphic;
+}
+.content__canvas {
+    padding: 50px;
+    background: rgb(7 7 7 / 38%);
+}
+.bubble{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d2f4fb;
+    box-shadow: 0 0 0 0 #d2f4fb;
+}
+.content__canvas_graph:hover {
+    cursor: url("https://cdn.custom-cursor.com/db/13504/32/comics-and-books-captain-underpants-cursor.png") 4 0, auto;
+}
+
+select.content__labels_x-group {
+    color: white;
+    width: 70px;
+    padding: 5px;
+    background: rgba(38, 38, 38, 0.72);
+    margin: 8px 6px;
+}
+
+.content__label-text{
+    background: rgba(0, 0, 0, 0);
+    color: #ced0e7;
+    text-decoration: underline;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.content__labels_r-group{
+    color: #fafafd;
+    font-size: 15px;
+}
+
+.content__labels_active, .content__labels_no-active {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+    width: 80px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 2px solid rgba(161, 161, 161, 0.71);
+    display: inline-block;
+    margin: 8px 6px;
+    background: #3b3939;
+    text-shadow: 0 1px 3px #000;
+}
+
+.content__labels_active:hover {
+    box-shadow: 0 0 12px #f2f1f5;
+    background: #595656;
+}
+
+.content__labels_no-active {
+    background: #3b3939;
+    cursor: url("https://img.icons8.com/office/0.5x/do-not-disturb.png"), default;
+}
+
+
+
+.content__canvas {
+    padding: 50px;
+    background: rgb(7 7 7 / 38%);
+}
+
+.content__labels_x {
+    padding: 10px 0 5px 0;
+    top: 250px;
+    grid-template-columns: 1.3fr 2fr 3fr;
+}
+
+.content__labels {
+    top: 30px;
+    background: rgb(7 7 7 / 38%);
+}
+
+.content__scroll_table {
+    border-spacing: 4px 6px;
+    background: rgba(0, 0, 0, 0.65);
+    caption-side: bottom;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size: 18px;
+    position: relative;
+    width: border-box;
+}
+
+#head_table .content__scroll_table_row_cell {
+    /*background: rgba(252, 160, 255, 0.98);*/
+    background: rgba(255, 251, 160, 0.98);
+    border-radius: 4px;
+    text-shadow: 0 1px 1px #2D2020;
+    text-align: center;
+    color: #0c0c0c;
+    font-size: 19px;
+    letter-spacing: 2px;
+    position: center;
+    margin: 5px;
+    height: 40px;
+}
+
+.content__scroll_table_row_cell {
+    display: table-cell;
+    padding: 2px 20px 2px 20px;
+    width: auto;
+    height: 35px;
+    border-radius: 3px;
+    background: rgba(203, 158, 246, 0.98);
+    text-shadow: 0 0.3px 0.3px #2D2020;
+}
+
+
+.content__scroll_table {
+    display: table;
+    overflow-y: scroll;
+}
+
+.content__scroll_table_row {
+    display: table-row;
+    width: auto;
+    animation: nani 1.5s forwards;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    0% {
+        height: 5px;
+    }
+    100% {
+        height: 30px;
+    }
+    0% {
+        font-size: 0;
+    }
+    100% {
+        font-size: medium;
+    }
+}
+
+@keyframes nani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content__scroll_table_new {
+    animation: ani 1s forwards;
+}
