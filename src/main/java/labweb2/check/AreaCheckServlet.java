@@ -1,22 +1,22 @@
 package labweb2.check;
 
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import labweb2.controll.RequestParameters;
 
+@WebServlet(urlPatterns = "/check")
 public class AreaCheckServlet extends HttpServlet {
-    private final RequestParameters parameters;
-    private final HttpServletResponse response;
-    private final HttpServletRequest request;
 
-    public AreaCheckServlet(RequestParameters parameters, HttpServletResponse response, HttpServletRequest request) {
-        this.parameters = parameters;
-        this.response = response;
-        this.request = request;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Results results =  new Check(req.getParameter("x"),req.getParameter("y"),req.getParameter("r")).getResults();
+        new CreateHttpResults(results, req, resp).work();
+        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
-    public void work() {
-       Results results =  new Check(parameters).getResults();
-       new CreateHttpResults(results, request, response).work();
-    }
+
 }

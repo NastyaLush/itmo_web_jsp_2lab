@@ -5,10 +5,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import labweb2.check.AreaCheckServlet;
 
 public class ControllerServlet extends HttpServlet {
-
 
     //если вздом с помошью урла
     @Override
@@ -17,14 +15,8 @@ public class ControllerServlet extends HttpServlet {
                 && isCorrectParameters(req.getParameter("y"))
                 && isCorrectParameters(req.getParameter("r"))
         ) {
-            RequestParameters requestParameters = new RequestParameters(
-                    req.getParameter("x"),
-                    req.getParameter("y"),
-                    req.getParameter("r"));
-            AreaCheckServlet areaCheckServlet = new AreaCheckServlet(requestParameters, resp, req);
-            areaCheckServlet.work();
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
-        } else {
+            getServletContext().getRequestDispatcher("/check").forward(req, resp);
+        } else{
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }
     }

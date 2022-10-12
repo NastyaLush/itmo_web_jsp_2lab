@@ -1,10 +1,10 @@
 package labweb2.check;
 
-public enum Result {
+public enum FieldResult {
     MISS("miss"),
     REACH("reach");
 
-    Result(String miss) {
+    FieldResult(String miss) {
     }
 
 

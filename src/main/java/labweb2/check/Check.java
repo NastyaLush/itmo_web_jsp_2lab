@@ -1,16 +1,14 @@
 package labweb2.check;
 
-import labweb2.controll.RequestParameters;
-
 public class Check {
     private final Double x;
     private final Double y;
     private final Double r;
 
-    public Check(RequestParameters parameters) {
-        this.x = parameters.getX();
-        this.y = parameters.getY();
-        this.r = parameters.getR();
+    public Check(String x, String y, String r) {
+        this.x =  Double.parseDouble(x);
+        this.y =  Double.parseDouble(y);
+        this.r =  Double.parseDouble(r);
     }
     private boolean isInTriangle(){
         return between(-r/2, 0 , x) && between(highTriangle(),0, y);
