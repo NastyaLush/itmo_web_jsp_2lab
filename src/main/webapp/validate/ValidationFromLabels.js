@@ -47,8 +47,8 @@ export class ValidationFromLabels {
             }, function (data) {
                 console.log(data); // ответ от сервера
             })
-                .success(function () {
-                    location.reload()
+                .success(function (data) {
+                    $('#head_table').after(data);
                 })
                 .error(function () {
                     console.log('Ошибка выполнения');

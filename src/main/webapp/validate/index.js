@@ -16,10 +16,5 @@ document.getElementsByName("r").forEach((value)=>{
 document.getElementById("send").addEventListener(("click"), ()=>{
     valid.sendResponse();
 });
-let point =  JSON.parse(sessionStorage.getItem("points"));
-if(point != null) {
-    let bubble = $('<div class="bubble" id="bubble" name="bubble"></div>');
-    bubble.css({'left': point.left, 'top': point.top});
-    $('#canvas').append(bubble);
-}
+
 

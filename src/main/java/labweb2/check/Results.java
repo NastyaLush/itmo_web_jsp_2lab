@@ -8,16 +8,16 @@ public class Results {
     private final double y;
     private final double r;
     private final FieldResult result;
-    private final String date;
+    private final String data;
 
     public Results(double x, double y, double r, boolean result) {
-        this.x = Math.floor(x*1000)/1000;
-        this.y = Math.floor(y*1000)/1000;
+        this.x = Math.floor(x * 1000) / 1000;
+        this.y = Math.floor(y * 1000) / 1000;
         this.r = r;
-        this.result = result? FieldResult.REACH: FieldResult.MISS;
-        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss ");
+        this.result = result ? FieldResult.REACH : FieldResult.MISS;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss ");
         Date date = new Date(System.currentTimeMillis());
-        this.date = formatter.format(date);
+        this.data = formatter.format(date);
 
     }
 
@@ -37,7 +37,21 @@ public class Results {
         return result;
     }
 
-    public String getDate() {
-        return date;
+    public String getData() {
+        return data;
+    }
+    public String getHTTP(){
+        return  "<div class=" + "content__scroll_table_row"+ "> " +
+                "<div class=" + "content__scroll_table_row_cell" + ">" +
+                x +
+                "</div> <div class=" + "content__scroll_table_row_cell" + ">" +
+                y +
+                "</div> <div class=" + "content__scroll_table_row_cell" + ">" +
+                r +
+                "</div> <div class=" + "content__scroll_table_row_cell" + ">" +
+                result +
+                "</div> <div class=" + "content__scroll_table_row_cell" + ">" +
+                data +
+                "</div> </div>";
     }
 }

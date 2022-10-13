@@ -5,15 +5,19 @@ html {
     position: relative;
     overflow-y: scroll;
 }
-
+body{
+    margin: 0;
+}
 .content__head_circle {
-    background-color: rgba(204, 141, 208, 0.73);
+    background-color: rgba(204, 141, 208, 0.56);
     width: 100px;
     height: 50px;
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
     position: absolute;
 }
-
+.content{
+    background-color: rgb(7 7 7 / 38%);
+}
 
 .head {
     display: grid;
@@ -156,13 +160,9 @@ html {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background-color: #d2f4fb;
-    box-shadow: 0 0 0 0 #d2f4fb;
+    background-color: #000000;
 }
 
-.content__canvas_graph:hover {
-    cursor: url("https://cdn.custom-cursor.com/db/13504/32/comics-and-books-captain-underpants-cursor.png") 4 0, auto;
-}
 
 select.content__labels_x-group {
     color: white;
@@ -207,7 +207,6 @@ select.content__labels_x-group {
 
 .content__labels_no-active {
     background: #3b3939;
-    cursor: url("https://img.icons8.com/office/0.5x/do-not-disturb.png"), default;
 }
 
 

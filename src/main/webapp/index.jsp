@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>lab-work 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="style/stylenew.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
@@ -62,9 +62,7 @@
     </div>
     <div class="error"></div>
     <div method="get" class="content__labels">
-        <%--<form action="ControllerServlet" method="get" class="content__labels">--%>
-
-        <div class="content__labels_x">
+     <div class="content__labels_x">
             <label class="content__label-text">Change X:</label>
             <select id="x" class="content__labels_x-group" name="x">
                 <option value="-5">-5</option>
@@ -81,7 +79,7 @@
         <div class="content__labels_y" id="y-group">
             <label for="y" class="content__label-text">Change Y:</label>
             <input class="content__labels_y_warning" type="text" name="y" id="y" placeholder="from -5 till 3">
-            <div id="log_y" class="content__labels_error"> &nbsp You should choose a y between -5 and 3 &nbsp</div>
+            <div id="log_y" class="content__labels_error"> You should choose a y between -5 and 3 &nbsp</div>
         </div>
         <div class="content__labels_r-group">
             <label class="content__label-text">Change R:</label>
@@ -96,10 +94,10 @@
             <input type="radio" id="3" value="3" name="r" class="content__label_r_radio">
             <label for="3">3</label>
         </div>
-        <div id="log_r" class="content__labels_error"> &nbsp You should choose an r &nbsp</div>
+        <div id="log_r" class="content__labels_error"> You should choose an r &nbsp</div>
         <button type="submit" class="content__labels_no-active" id="send">send</button>
     </div>
-    <div class="content__scroll">
+    <div class="content__scroll" id="content__scroll">
         <div class="content__scroll_table" id="table">
             <div class="content__scroll_table_row" id="head_table">
                 <div class="content__scroll_table_row_cell">X</div>
@@ -108,22 +106,13 @@
                 <div class="content__scroll_table_row_cell">Result</div>
                 <div class="content__scroll_table_row_cell">The Date</div>
             </div>
-            <c:forEach var="result" items="${data}">
-                <div class="content__scroll_table_row">
-                    <div class="content__scroll_table_row_cell">${result.x}</div>
-                    <div class="content__scroll_table_row_cell">${result.y}</div>
-                    <div class="content__scroll_table_row_cell">${result.r}</div>
-                    <div class="content__scroll_table_row_cell">${result.result}</div>
-                    <div class="content__scroll_table_row_cell">${result.date}</div>
-                </div>
-            </c:forEach>
             <div></div>
         </div>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="module" src="./validation/index.js"></script>
+<script type="module" src="./validate/index.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

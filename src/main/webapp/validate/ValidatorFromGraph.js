@@ -1,11 +1,11 @@
-export class ValidationFromGraph{
+export class ValidationFromGraph {
 
-    createHTTPReq(event){
+    createHTTPReq(event) {
 
         const r = $('input[name="r"]:checked').val();
         if (null == r) {
             Swal.fire({
-                icon: 'warning',
+                icon: 'error',
                 title: 'Oops...',
                 text: 'You should choose r!',
             })
@@ -24,15 +24,18 @@ export class ValidationFromGraph{
 
             $.get('ControllerServlet', {x: x, y: y, r: r}, function (data) {
                 console.log(data); // ответ от сервера
-            }).success(function () {
-                    sessionStorage.setItem("points", JSON.stringify({left: event.layerX, top: event.layerY}));
-                    location.reload();
-                })
+            }).success(function (data) {
+                let dataHtml = $(data);
+                $('#head_table').after(dataHtml);
+                let bubble = $('<div class="bubble" id="bubble" name="bubble"></div>');
+                bubble.css({'left': event.layerX, 'top': event.layerY });
+                $('#canvas').append(bubble);
+            })
                 .error(function () {
-                    console.log('Ошибка выполнения');
+                    console.log('execute error');
                 })
                 .complete(function () {
-                    console.log('Завершение выполнения');
+                    console.log('execute finished');
                 });
 
 

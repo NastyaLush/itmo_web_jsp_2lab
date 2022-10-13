@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ControllerServlet extends HttpServlet {
 
-    //если вздом с помошью урла
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (isCorrectParameters(req.getParameter("x"))
@@ -16,7 +15,7 @@ public class ControllerServlet extends HttpServlet {
                 && isCorrectParameters(req.getParameter("r"))
         ) {
             getServletContext().getRequestDispatcher("/check").forward(req, resp);
-        } else{
+        } else {
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }
     }
