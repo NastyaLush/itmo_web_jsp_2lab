@@ -25,8 +25,8 @@ export class ValidationFromGraph {
             $.get('ControllerServlet', {x: x, y: y, r: r}, function (data) {
                 console.log(data); // ответ от сервера
             }).success(function (data) {
-                let dataHtml = $(data);
-                $('#head_table').after(dataHtml);
+                $('.content__scroll_table_row:not(#head_table)').remove();
+                $('#head_table').after(data);
                 let bubble = $('<div class="bubble" id="bubble" name="bubble"></div>');
                 bubble.css({'left': event.layerX, 'top': event.layerY });
                 $('#canvas').append(bubble);

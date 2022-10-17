@@ -48,13 +48,14 @@ export class ValidationFromLabels {
                 console.log(data); // ответ от сервера
             })
                 .success(function (data) {
+                    $('.content__scroll_table_row:not(#head_table)').remove();
                     $('#head_table').after(data);
                 })
-                .error(function () {
-                    console.log('Ошибка выполнения');
+                .error(function (e) {
+                    console.log('Execute error: ' + e);
                 })
                 .complete(function () {
-                    console.log('Завершение выполнения');
+                    console.log('finish execute');
                 });
         } else {
             Swal.fire({
